@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Results</title>
+    <style>
+        /* Styles for the body */
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+#winner {
+  background-color: #F9F9F9;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the chart container */
+#chart-container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Styles for the chart title */
+.chart-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Styles for the chart canvas */
+canvas {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+/* Styles for the buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+/* Styles for the page header */
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Styles for the page title */
+.page-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Styles for the page subtitle */
+.page-subtitle {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Styles for the page container */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+    </style>
+</head>
+<body> 
+    <div id="winner"></div>
+    <button onclick="readContract()">Tell me the result</button>
+    <button onclick="getInsight()">Bar Result</button>
+    <button onclick="getInsight2()">Pie Result</button>
+    <div id="chart-container">
+        <canvas id="myChart"></canvas>
+        <canvas id="myChart2"></canvas>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></script>
+    <script src="/public/js/script.js"></script>
+    <script src="/public/js/scriptR.js"></script>
+</body>
+</html>

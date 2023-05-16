@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+    <style>
+        * {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e6e6e6;
+  font-family: Arial, sans-serif;
+}
+
+.login {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  margin: 100px auto;
+  max-width: 500px;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+#message {
+  color: red;
+  text-align: center;
+}
+
+    </style>
+	<body>
+        <div class="login">
+          <h1>Login</h1>
+          <form>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+            <button type="button" id="get-otp" onclick="getOTP()">Get OTP</button>
+            <label for="otp">OTP</label>
+            <input type="number" id="otp" name="otp" placeholder="Enter the OTP">
+            <button type="button" id="log-in" onclick="logIn()">Log In</button>
+          </form>
+          <div id="message"></div>
+        </div>
+    
+	
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//media.twiliocdn.com/sdk/js/chat/releases/3.3.0/twilio-chat.min.js"></script>
+    <script>
+      // Initialize the Twilio client with your Account SID and Auth Token
+      const accountSid = "ACc06706636286a8b7de86701d71537e14";
+      const authToken = "f96daf52c9c832964235917a3c8f8e35";
+      const client = Twilio(accountSid, authToken);
+
+      function getOTP() {
+        const phone = document.getElementById("phone").value;
+        if (phone && phone.length == 10 && !isNaN(phone)) {
+          const otp = Math.floor(1000 + Math.random() * 9000);
+          document.getElementById("message").textContent = `OTP sent to ${phone}.`;
+          client.messages.create({
+            body: `Your OTP is ${otp}.`,
+            from: 938938,
+            to: 3438787
+          }).then(message => console.log(message.sid));
+        } else {
+          document.getElementById("message").textContent = "Please enter a valid phone number.";
+        }
+      }
+
+      function logIn() {
+        const otp = document.getElementById("otp").value;
+        if (otp && otp.length == 4 && !isNaN(otp)) {
+          document.getElementById("message").textContent = "Logged in successfully!";
+          // Redirect to the main page here
+        } else {
+          document.getElementById("message").textContent = "Please enter a valid OTP.";
+        }
+      }
+      </script>
+      </body>
+      </html>

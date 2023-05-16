@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  .column img{
+    margin: 70px;
+  }
+  img{
+    width: 200px;
+    border: 2px solid grey;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #f0f0f0;
+  }
+  nav h1{
+    align-items: center;
+  }
+  .logo h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile img {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+  }
+
+  ul li{
+    width: 90%;
+    margin : 20px;
+    border:1.5px solid grey;
+    list-style: none;
+  }
+  ul li h3{
+    margin-right:290px;
+    display: inline-block;
+    margin-left: 5%;
+  }
+  ul li button{
+    margin-left :60%;
+  }
+  .profile a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .container {
+    background-color: azure;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  .button-7 {
+    background-color: #0095ff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.15385;
+    margin: 0;
+    outline: none;
+    padding: 8px .8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+  }
+  
+  .button-7:hover,
+  .button-7:focus {
+    background-color: #07c;
+  }
+  
+  .button-7:focus {
+    box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+  }
+  
+  .button-7:active {
+    background-color: #0064bd;
+    box-shadow: none;
+  }
+  .container{
+    box-shadow: 10px 10px 5px lightblue;
+  }
+  input[type="tel"],
+  input[type="radio"] {
+    padding: 0.5rem;
+   
+  }

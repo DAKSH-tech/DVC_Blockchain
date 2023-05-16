@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voting System</title>
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <style>
+        nav {
+      background-color: #262626;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    .logo h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .profile img {
+      border-radius: 50%;
+      height: 30px;
+      margin-right: 10px;
+      width: 30px;
+    }
+
+    .profile a {
+      color: #c7c7c7;
+      text-decoration: none;
+    }
+
+    /* Main content */
+    .row {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .column img {
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
+
+    .container {
+      background-color: #f2f2f2;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    input[type="tel"] {
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      padding: 10px;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    .party {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .party li {
+      margin: 20px;
+    }
+
+    .party img {
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    .party h3 {
+      margin: 0;
+    }
+
+    .button-7 {
+      border: 2px solid #999999;
+      border-radius: 5px;
+      color: #333333;
+      font-size: 16px;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .button-7:hover {
+      background-color: #999999;
+      border-color: #999999;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Responsive layout */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
+    }
+    </style>
+</head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="logo">
+        <h1>Voting System using Blockchain</h1>
+      </div>
+      <a href="http://localhost:8000/result">Result</button>
+      <div class="profile">
+        <img src="/public/Images/p1.jpg" alt="Profile" />
+        <a href="#">Logout</a>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+       <div class="row">
+        <div class="column">
+          <img src="/public/Images/p2.png" alt="hi">
+          <img src="/public/Images/EC.jpg" alt="hi">
+        </div>
+        <div class="column" >
+          <div class="container">
+            <!-- Form -->
+            <form id="vote-form" onsubmit="return false">
+              <div class="input-group">
+                <label for="aadhar">Aadhar Number:</label>
+                <input type="tel" id="aadhar" name="aadhar" onblur="storePhoneNumber()" required"/>
+              </div>
+              <div class="party ">
+                <ul>
+                  <li><img src="/public/Images/BJP.jpg" alt="BJP" /><h3>BJP</h3><button class="button-7" role="button" value="BJP" onclick="getResult(this)">Submit Vote</button></li>
+                  <li><img src="/public/Images/Cong.png" alt="Cong" /><h3>Cong</h3><button class="button-7" role="button" value="Cong" onclick="getResult(this)">Submit Vote</button></li>
+                  <li><img src="/public/Images/BSP.png" alt="BSP" /><h3>BSP</h3><button class="button-7" role="button" value="BSP"onclick="getResult(this)">Submit Vote</button></li>
+                  <li><img src="/public/Images/CPI.png" alt="CPI" /><h3>CPI</h3><button class="button-7" role="button" value="CPI"onclick="getResult(this)">Submit Vote</button></li>
+                  <li><img src="/public/Images/AAP.jpg" alt="AAP" /><h3>AAP</h3><button class="button-7" role="button" value="AAP" onclick="getResult(this)">Submit Vote</button></li>
+                </ul>
+              </div>
+            </form>
+    
+            <!-- Result button -->
+          </div>
+        </div>
+        <div class="column">
+          <img src="/public/Images/p1.jpg" alt="HI">
+          <img src="/public/Images/DI.png" alt="HI">
+        </div>
+      </div> -->
+    <!-- Script -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></script>
+    <script src="/public/js/script.js"></script> 
+  </body>
+</html>
